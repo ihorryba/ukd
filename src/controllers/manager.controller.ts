@@ -16,13 +16,27 @@ class User extends Person {
 
 let user: User = new User('Ivan');
 
-import {get} from '@loopback/rest';
+console.log(user.getName());
+
+import {get, post} from '@loopback/rest';
 
 export class ManagerController {
   constructor() { }
 
   @get('/user')
   user(): string {
+
+    return "Hello World!";
+  }
+
+  @post('/api/files')
+  upload(): string {
+
+    return "Hello World!";
+  }
+
+  @get('/api/samples')
+  samples(): string {
 
     return "Hello World!";
   }
